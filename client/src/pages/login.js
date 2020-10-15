@@ -7,7 +7,10 @@ class Login extends Component {
 
     render(){
         return(
+            <>
           <SignIn />
+          <a href ='/createuser'>Create Account</a>
+          </>
         )
     }
 }

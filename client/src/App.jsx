@@ -1,12 +1,25 @@
 import React, { Component } from "react";
-// import logo from "./logo.svg";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Login from './pages/Login';
+import Create from './pages/CreateUser'
 
 function App() {
   return (
     <div >
-      <Login />
+      <Router>
+
+        <Switch>
+          <Route exact path="/" component={Login} />
+          </Switch>
+          <Switch>
+          <Route exact path="/createuser" component={Create} />
+        </Switch>
+
+      </Router>
+
+
+
     </div>
   );
 }
