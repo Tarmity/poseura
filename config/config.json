@@ -1,0 +1,20 @@
+{
+  "development": {
+    "username": "root",
+    "password": null,
+    "database": "user",
+    "host": "127.0.0.1",
+    "dialect": "mongoose"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mongoose"
+  },
+  "production": {
+    "use_env_variable": "mongoDB",
+    "dialect": "mongoose"
+  }
+}
