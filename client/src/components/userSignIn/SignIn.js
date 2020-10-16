@@ -4,6 +4,7 @@ import { Form, Button, Container } from 'react-bootstrap';
 
 
 
+
 class SignIn extends Component {
 
     render() {
@@ -11,7 +12,7 @@ class SignIn extends Component {
 
             <>
                 <Container style={{ border: "solid" }}>
-                    <Form action ="/login" method="post">
+                    <Form action ="/home" method="post">
                         <Form.Group controlId="formBasicEmail">
                             <Form.Label>Email address</Form.Label>
                             <Form.Control type="email" placeholder="Enter email" />
