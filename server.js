@@ -2,10 +2,21 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const passport = require("./config/passport");
+const mongoose = require('mongoose')
 // Define middleware here
 
 const PORT = process.env.PORT || 3001;
-const db = require("./models");
+// Send every other request to the React app
+mongoose.connect(
+  process.env.MONGODB_URI || 'mongodb://localhost/Useraccount',
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+  }
+);
+
 
 
 app.use(express.urlencoded({ extended: true }));
@@ -23,7 +34,6 @@ app.use(passport.session());
 require("./routes/apiRoutes")(app);
 
 
-// Send every other request to the React app
 // Define any API routes before this runs
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));

@@ -1,4 +1,5 @@
 const db = require("../models");
+
 const passport = require("../config/passport")
 
 
@@ -12,21 +13,23 @@ module.exports = function (app) {
         });
     });
 
-    app.post("/api/createUser", (req, res) => {
+    app.post("/api/create-user", (req, res) => {
+
+        console.log('heyy');
         db.User.create({
-            _id: req.body._id,
             firstName: req.body.firstName,
             lastName: req.body.lastName,
             email: req.body.email,
             phone: req.body.phone,
-            password: req.cody.password
+            password: req.body.password
         })
-        .then (() => {
-            res.jsonredirect(307, "/api/login");
+        .then ((user) => {
+            res.json(user)
+            // res.jsonredirect(307, "/api/login");
         })
         .catch(err => {
-            res.status(401).json(err);
-            
+            res.status(400).json(err);
+
         })
     })
 }
