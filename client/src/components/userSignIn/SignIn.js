@@ -7,12 +7,21 @@ import { Form, Button, Container } from 'react-bootstrap';
 
 class SignIn extends Component {
 
+    state ={
+
+    }
+
+    handleSubmit = event => {
+        event.preventDefault();
+        })
+
+
     render() {
         return (
 
             <>
                 <Container style={{ border: "solid" }}>
-                    <Form action ="" method="post">
+                    <Form onSubmit = {handleSubmit}>
                         <Form.Group controlId="formBasicEmail">
                             <Form.Label>Email address</Form.Label>
                             <Form.Control type="email" placeholder="Enter email" />
