@@ -5,19 +5,19 @@ const passport = require("../config/passport")
 
 module.exports = function (app) {
 
-    app.post('/login',
-    passport.authenticate('local', { successRedirect: '/home',
-                                     failureRedirect: '/login',
-                                     failureFlash: true }));
+    // app.post('/login',
+    // passport.authenticate('local', { successRedirect: '/home',
+    //                                  failureRedirect: '/login',
+    //                                  failureFlash: true }));
     
     
-    // app.post("/api/login", passport.authenticate("local"), (req, res) => {
-    //     res.json({
-    //         email: req.user.email,
-    //         id: req.user.id
+    app.post("/api/login", passport.authenticate("local"), (req, res) => {
+        res.json({
+            email: req.user.email,
+            id: req.user.id
 
-    //     });
-    // });
+        });
+    });
 
     app.post("/api/create-user", (req, res) => {
 

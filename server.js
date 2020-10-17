@@ -5,10 +5,10 @@ const passport = require("./config/passport");
 const mongoose = require('mongoose')
 // Define middleware here
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 8000;
 // Send every other request to the React app
 mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://localhost/Useraccount',
+  process.env.MONGODB_URI || 'mongodb://localhost/poseura',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
