@@ -15,22 +15,42 @@ class SignIn extends Component {
         }
         this.handleSubmit= this.handleSubmit.bind(this);
         this.handleChange= this.handleChange.bind(this);
-    }
+    };
  
     handleChange(event) {
         this.setState({
             [event.target.name]: event.target.value
         })
-    }
+    };
 
     handleSubmit(event) {
         event.preventDefault()
         console.log('handleSubmit')
-    }
 
+        axios.post('/', {
+            email: this.state.email,
+            password: this.state.password
+        })
+        .then (response => {
+            console.log('login response: ')
+            console.log(response)
+            if(response.status === 200) {
+                //update App.jsx state
+                this.props.updateUser({
+                    loggedIn: true,
+                    firstName: response.data.firstName
+                })
 
-
-
+                //update the state to redirect to home
+                this.setState({
+                    redirectTo: '/home'
+                })
+            }
+        }).catch (error => {
+            console.log('login error: ')
+            console.log(error);
+        })
+    };
 
     render() {
         return (
