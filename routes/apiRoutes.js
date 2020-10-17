@@ -1,17 +1,12 @@
 const db = require("../models");
+const passport = require("../config/passport");
+const express =require ('express');
+const router = express.Router()
 
-const passport = require("../config/passport")
 
-
-module.exports = function (app) {
-
-    // app.post('/login',
-    // passport.authenticate('local', { successRedirect: '/home',
-    //                                  failureRedirect: '/login',
-    //                                  failureFlash: true }));
-    
-    
-    app.post("/api/", passport.authenticate("local"), (req, res) => {
+ 
+  
+    router.post("/api/", passport.authenticate("local"), (req, res) => {
         res.json({
             email: req.user.email,
             id: req.user.id
@@ -19,7 +14,17 @@ module.exports = function (app) {
         });
     });
 
-    app.post("/api/create-user", (req, res) => {
+    router.get('/api/', (req, res, next) => {
+        console.log('===== user!!======')
+        console.log(req.user)
+        if (req.user) {
+            res.json({ user: req.user })
+        } else {
+            res.json({ user: null })
+        }
+    })
+
+    router.post("/api/create-user", (req, res) => {
 
         console.log('heyy');
         db.User.create({
@@ -41,4 +46,4 @@ module.exports = function (app) {
 
   
 
-};
+module.exports = router

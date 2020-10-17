@@ -10,7 +10,7 @@ const morgan = require('morgan');
 const models = require('./models');
 
 // Define middleware here
-app.use(session({secret: 'surfs-up'}))
+// app.use(session({secret: 'surfs-up'}))
 // app.use( (req, res, next) => {
 //   console.log('req.session', req.session);
 //   next()

@@ -36,7 +36,7 @@ class SignIn extends Component {
             console.log(response)
             if(response.status === 200) {
                 //update App.jsx state
-                this.props.updateUser({
+                this.state.updateUser({
                     loggedIn: true,
                     firstName: response.data.firstName
                 })
@@ -53,6 +53,11 @@ class SignIn extends Component {
     };
 
     render() {
+        if (this.state.redirectTo) {
+            return <Redirect to ={{ pathname: this.state.redirectTo }} />
+        } else {
+
+        
         return (
 
             <>
@@ -81,6 +86,7 @@ class SignIn extends Component {
             </>
         );
     }
+}
 }
 
 export default SignIn;

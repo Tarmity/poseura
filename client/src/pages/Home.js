@@ -6,7 +6,7 @@ function Home () {
 
     return (
         <>
-        <div style={{fontSize: "100px"}}>Hello</div>
+        <h1 style={{fontSize: "100px"}}>Hello </h1>
         </>
     )
 }
