@@ -5,7 +5,9 @@ import React from 'react';
 function Home () {
 
     return (
-        <div>Hello</div>
+        <>
+        <div style={{fontSize: "100px"}}>Hello</div>
+        </>
     )
 }
 

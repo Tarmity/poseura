@@ -35,6 +35,7 @@ class CreateAccount extends Component {
         return (
 
             <>
+            <h1 style={{ fontSize: "100px" }}>Create Account</h1>
                 <Container style={{ border: "solid" }}>
                     <Form onSubmit={this.submit}>
                         <Form.Group controlId="formBasicFirstName">
