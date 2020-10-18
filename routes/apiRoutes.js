@@ -6,7 +6,7 @@ const router = express.Router()
 
  
   
-    router.post("/api/", passport.authenticate("local"), (req, res) => {
+    router.post("/api/login", passport.authenticate("local"), (req, res) => {
         res.json({
             email: req.user.email,
             id: req.user.id
@@ -14,7 +14,7 @@ const router = express.Router()
         });
     });
 
-    router.get('/api/', (req, res, next) => {
+    router.get('/api/login', (req, res, next) => {
         console.log('===== user!!======')
         console.log(req.user)
         if (req.user) {
@@ -24,7 +24,7 @@ const router = express.Router()
         }
     })
 
-    router.post("/api/create-user", (req, res) => {
+    router.post("/api/createuser", (req, res) => {
 
         console.log('heyy');
         db.User.create({

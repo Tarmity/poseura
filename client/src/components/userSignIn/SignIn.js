@@ -27,7 +27,7 @@ class SignIn extends Component {
         event.preventDefault()
         console.log('handleSubmit')
 
-        axios.post('/', {
+        axios.post('/login', {
             email: this.state.email,
             password: this.state.password
         })
