@@ -49,13 +49,13 @@ app.use(passport.session()); // calls serializeUser and deserializeUser
 
 // require("./routes/apiRoutes")(app);
 router = require("./routes/apiRoutes")
-
+app.use(router)
 // Define any API routes before this runs
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
 app.listen(PORT, () => {
-app.use(router)
+
   console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
