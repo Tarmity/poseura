@@ -21,7 +21,7 @@ const models = require('./models');
 //   res.end()
 // })
 
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 3000;
 // Send every other request to the React app
 mongoose.connect(
   process.env.MONGODB_URI || 'mongodb://localhost/poseura',

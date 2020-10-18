@@ -24,7 +24,7 @@ class CreateAccount extends Component {
 
     submit = (event) => {
         event.preventDefault();
-        axios.post("/api/createuser", this.state)
+        axios.post("/api/create-user", this.state)
             .then((response) => {
                 console.log(response);
             })

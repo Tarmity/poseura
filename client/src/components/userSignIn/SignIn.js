@@ -11,6 +11,7 @@ class SignIn extends Component {
         this.state = {
             email: "",
             password: "",
+            firstName: "",
             redirectTo: null
         }
         this.handleSubmit= this.handleSubmit.bind(this);
@@ -27,7 +28,7 @@ class SignIn extends Component {
         event.preventDefault()
         console.log('handleSubmit')
 
-        axios.post('/login', {
+        axios.post('/api/login', {
             email: this.state.email,
             password: this.state.password
         })
@@ -36,7 +37,7 @@ class SignIn extends Component {
             console.log(response)
             if(response.status === 200) {
                 //update App.jsx state
-                this.state.updateUser({
+                this.props.updateUser({
                     loggedIn: true,
                     firstName: response.data.firstName
                 })

@@ -24,7 +24,7 @@ const router = express.Router()
         }
     })
 
-    router.post("/api/createuser", (req, res) => {
+    router.post("/api/create-user", (req, res) => {
 
         console.log('heyy');
         db.User.create({
