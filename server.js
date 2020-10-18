@@ -3,13 +3,11 @@ const path = require("path");
 const app = express();
 const passport = require("./config/passport");
 const mongoose = require('mongoose')
-const router = require("./routes")
 const session = require('express-session')
 
 
 const morgan = require('morgan');
 const models = require('./models');
-// const router = require("./routes/apiRoutes");
 
 // Define middleware here
 // app.use(session({secret: 'surfs-up'}))
@@ -23,7 +21,7 @@ const models = require('./models');
 //   res.end()
 // })
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 // Send every other request to the React app
 mongoose.connect(
   process.env.MONGODB_URI || 'mongodb://localhost/poseura',
@@ -49,9 +47,8 @@ app.use(passport.session()); // calls serializeUser and deserializeUser
 
 // Define API routes here
 
-app.use(router)
 // require("./routes/apiRoutes")(app);
-
+router = require("./routes/apiRoutes")
 
 // Define any API routes before this runs
 app.get("*", (req, res) => {
@@ -59,5 +56,6 @@ app.get("*", (req, res) => {
 });
 
 app.listen(PORT, () => {
+app.use(router)
   console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
