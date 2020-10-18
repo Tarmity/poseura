@@ -26,8 +26,19 @@ class CreateAccount extends Component {
         event.preventDefault();
         axios.post("/api/create-user", this.state)
             .then((response) => {
-                console.log(response);
-            })
+                console.log(response)
+                if (response.data) {
+                    console.log('successful signup')
+                    this.setState({
+                        redirectTo: '/'
+                    })
+                } else {
+                    console.log('sign-up error');
+                }
+            }).catch(error => {
+                console.log('Sign up server error')
+                console.log(error)
+            })  
 
     } 
 
