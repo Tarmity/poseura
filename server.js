@@ -3,11 +3,13 @@ const path = require("path");
 const app = express();
 const passport = require("./config/passport");
 const mongoose = require('mongoose')
+const router = require("./routes")
 const session = require('express-session')
 
 
 const morgan = require('morgan');
 const models = require('./models');
+// const router = require("./routes/apiRoutes");
 
 // Define middleware here
 // app.use(session({secret: 'surfs-up'}))
@@ -47,7 +49,8 @@ app.use(passport.session()); // calls serializeUser and deserializeUser
 
 // Define API routes here
 
-require("./routes/apiRoutes")(app);
+app.use(router)
+// require("./routes/apiRoutes")(app);
 
 
 // Define any API routes before this runs
