@@ -1,17 +1,16 @@
 const db = require("../models");
 const passport = require("../config/passport");
-const express =require ('express');
+const express = require ('express');
 const router = express.Router()
 
 
- 
-  
     router.post("/api/login", passport.authenticate("local"), (req, res) => {
         res.json({
             email: req.user.email,
             id: req.user.id
 
         });
+        console.log(res)
     });
 
     router.get('/api/login', (req, res, next) => {
@@ -36,13 +35,28 @@ const router = express.Router()
         })
         .then ((user) => {
             res.json(user)
-            // res.jsonredirect(307, "/api/login");
+        //  res.json.redirect(307, "/login");
         })
         .catch(err => {
             res.status(400).json(err);
 
         })
     })
+
+    router.get("/api/user_data", (req, res) => {
+        if (!req.user) {
+          // The user is not logged in, send back an empty object
+          res.json({});
+        } else {
+          // Otherwise send back the user's email and id
+          // Sending back a password, even a hashed password, isn't a good idea
+          res.json({
+            email: req.user.email,
+            id: req.user.id
+          });
+        }
+      });
+    };
 
   
 

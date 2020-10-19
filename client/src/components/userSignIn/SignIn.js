@@ -9,18 +9,20 @@ class SignIn extends Component {
     constructor() {
         super()
         this.state = {
-            email: "",
-            password: "",
-            firstName: "",
+            email: " ",
+            password: " ",
+            firstName: " ",
             redirectTo: null
         }
         this.handleSubmit= this.handleSubmit.bind(this);
         this.handleChange= this.handleChange.bind(this);
     };
  
-    handleChange(event) {
+    handleChange = event => {
+        event.preventDefault();
+        const { name, value } = event.target;
         this.setState({
-            [event.target.name]: event.target.value
+            [ name ]: value
         })
     };
 
@@ -30,7 +32,7 @@ class SignIn extends Component {
 
         axios.post('/api/login', {
             email: this.state.email,
-            password: this.state.password
+            password: this.state.password,
         })
         .then (response => {
             console.log('login response: ')
