@@ -8,17 +8,18 @@ const router = express.Router()
   
     router.post("/api/login", passport.authenticate("local"), (req, res) => {
         res.json({
-            email: req.user.email,
-            id: req.user.id
+            email: req.body.email,
+            password: req.body.password,
+            // id: req.user.id
 
         });
     });
 
     router.get('/api/login', (req, res, next) => {
         console.log('===== user!!======')
-        console.log(req.user)
-        if (req.user) {
-            res.json({ user: req.user })
+        console.log(req.body)
+        if (req.body) {
+            res.json({ user: req.body })
         } else {
             res.json({ user: null })
         }
