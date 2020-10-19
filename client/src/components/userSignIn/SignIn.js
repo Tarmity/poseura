@@ -64,7 +64,7 @@ class SignIn extends Component {
             <>
             <h1 style={{ fontSize: "100px" }}>Login</h1>
                 <Container style={{ border: "solid" }}>
-                    <Form >
+                    <Form onSubmit={this.handleSubmit}>
                         <Form.Group controlId="formBasicEmail">
                             <Form.Label>Email address</Form.Label>
                             <Form.Control name="email" type="email" value={this.state.email} onChange={this.handleChange} placeholder="Enter email"  />
@@ -77,7 +77,7 @@ class SignIn extends Component {
                             <Form.Label>Password</Form.Label>
                             <Form.Control name= "password" type="password" value={this.state.password} onChange={this.handleChange} placeholder="Password" />
                         </Form.Group>
-                        <Button variant="primary" onClick={this.handleSubmit} type="submit">
+                        <Button variant="primary" type="submit">
                             Login
                     </Button>
                     </Form>
