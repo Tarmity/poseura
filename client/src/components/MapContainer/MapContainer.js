@@ -5,7 +5,7 @@ export class MapContainer extends Component {
   render() {
     return (
         
-      <Map google={this.props.google} zoom={14}>
+      <Map style={{ width: '400px', height: '400px'}} google={this.props.google} zoom={14}>
        {process.env.GAPI_KEY}
         <Marker onClick={this.onMarkerClick}
                 name={'Current location'} />
