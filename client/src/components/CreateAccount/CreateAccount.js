@@ -15,6 +15,7 @@ class CreateAccount extends Component {
 
     handleInput = event => {
         event.preventDefault();
+        console.log(process.env)
         const { name, value } = event.target;
         this.setState({
             [ name ]: value

@@ -13,8 +13,8 @@ function Home() {
             <JumboHome />
             <Container>
                 <Row>
-                    <Col><Link to="/booking">Blog</Link></Col>
-                    <Col>Make A booking</Col>
+                    <Col>Blog</Col>
+                    <Col><Link to="/booking">Make A booking</Link></Col>
                     <Col>Create Photographer Profile</Col>
                 </Row>
             </Container>

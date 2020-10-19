@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Form, Button, Container } from 'react-bootstrap';
-import { Redirect, withRouter } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 
 
