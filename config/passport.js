@@ -10,20 +10,18 @@ passport.use(
             usernameField: "email"
         },
         (email, password, done) => {
-
+            console.log('inside passport', email, password)
             db.User.findOne({
-                where: {
-                    email: email
-                }
+                email: email
             }).then(dbUser => {
-
-                if(!dbUser) {
+                console.log(dbUser.checkPassword)
+                if (!dbUser) {
                     return done(null, false, {
                         message: "Incorrect email."
                     });
                 }
 
-                else if (!dbUser.validPassword(password)) {
+                else if (!dbUser.checkPassword(password)) {
                     return done(null, false, {
                         message: "Incorrect password."
                     });
@@ -35,7 +33,7 @@ passport.use(
     )
 );
 
-passport.serializeUser ((user, cb) => {
+passport.serializeUser((user, cb) => {
     cb(null, user);
 });
 
@@ -43,4 +41,4 @@ passport.deserializeUser((obj, cb) => {
     cb(null, obj);
 });
 
-module.exports =passport;
+module.exports = passport;

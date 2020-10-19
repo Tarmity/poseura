@@ -50,7 +50,7 @@ class Login extends Component {
     render(){
         return(
             <>
-          <SignIn />
+          <SignIn updateUser={this.updateUser}/>
           <a href ='/createuser'>Create Account</a>
           </>
         )

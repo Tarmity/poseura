@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Form, Button, Container } from 'react-bootstrap';
-import { Redirect } from 'react-router-dom';
+import { Redirect, withRouter } from 'react-router-dom';
 import axios from 'axios';
 
 
@@ -11,13 +11,13 @@ class SignIn extends Component {
         this.state = {
             email: " ",
             password: " ",
-            firstName: " ",
             redirectTo: null
         }
         this.handleSubmit= this.handleSubmit.bind(this);
         this.handleChange= this.handleChange.bind(this);
     };
- 
+
+   // handles the inputs of the form
     handleChange = event => {
         event.preventDefault();
         const { name, value } = event.target;
@@ -25,8 +25,8 @@ class SignIn extends Component {
             [ name ]: value
         })
     };
-
-    handleSubmit(event) {
+    // Handles the sumbmit request on the from to login
+    handleSubmit = event => {
         event.preventDefault()
         console.log('handleSubmit')
 
@@ -81,7 +81,7 @@ class SignIn extends Component {
                         </Form.Group>
                         <Button variant="primary" type="submit">
                             Login
-                    </Button>
+                        </Button>
                     </Form>
                 </Container>
 
