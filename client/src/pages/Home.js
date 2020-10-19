@@ -1,6 +1,7 @@
 import React from 'react';
 import JumboHome from '../components/JumboHome/JumboHome';
 import {  Container, Row, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 
 
@@ -12,7 +13,7 @@ function Home() {
             <JumboHome />
             <Container>
                 <Row>
-                    <Col>Blog</Col>
+                    <Col><Link to="/booking">Blog</Link></Col>
                     <Col>Make A booking</Col>
                     <Col>Create Photographer Profile</Col>
                 </Row>

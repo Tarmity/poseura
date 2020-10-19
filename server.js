@@ -4,6 +4,7 @@ const app = express();
 const passport = require("./config/passport");
 const mongoose = require('mongoose')
 const session = require('express-session')
+require('dotenv').config()
 
 
 const morgan = require('morgan');
