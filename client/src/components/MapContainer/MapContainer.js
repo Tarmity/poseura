@@ -14,6 +14,10 @@ export class MapContainer extends Component {
             // ======================= GeoLocation ===================================
             // =============================== PlacesAutocomplete ===============================================
             address: " ",
+            coordinates : {
+                lat: null,
+                lng: null
+            },
 
             // =============================== PlacesAutocomplete ===============================================
             // showingInfoWindow: false,
@@ -87,12 +91,20 @@ export class MapContainer extends Component {
     //     console.log(error);
     // }
 
-    handleSelect = address => {
-        geocodeByAddress(address)
-          .then(results => getLatLng(results[0]))
-          .then(latLng => console.log('Success', latLng))
-          .catch(error => console.error('Error', error));
-      };
+    async handleSelect (value) {
+        const results = await geocodeByAddress(value)
+        const latLng = await getLatLng(results[0]) 
+        console.log(latLng)
+        } 
+        // console.log(results[0].formatted_address) 
+        // await this.setState({
+        //     coordinates: latLng
+        // })
+        // geocodeByAddress(address)
+        //   .then(results => getLatLng(results[0]))
+        //   .then(latLng => console.log('Success', latLng))
+        //   .catch(error => console.error('Error', error));
+    //   };
 
 // =============================== PlacesAutocomplete =============================================== 
 
@@ -139,6 +151,9 @@ render() {
 
                 {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
                     <div>
+                        <p>Latitude: {this.state.coordinates.lat}</p>
+                        <p>Latitude: {this.state.coordinates.lng}</p>
+
                         <input {...getInputProps({
                             placeholder: "Search Places ....",
                             className: 'location-search-input',
