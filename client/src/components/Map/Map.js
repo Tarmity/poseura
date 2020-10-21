@@ -10,7 +10,7 @@ import './Map.css';
 const libraries = ["places"]
 const mapContainerStyle = {
     width: "100vw",
-    height: "100vh",
+    height: "50vh",
 };
 const center = {
     lat: -27.4698,
@@ -59,53 +59,58 @@ export default function Map() {
     if (!isLoaded) return "Loading Maps";
 
 
-    return <div>
-        <h1 className="mapHeader">Poseura <span role="img" aria-label="camera">📷</span></h1>
-        <Search panTo={panTo} />
-        <Locate panTo={panTo} />
+    return (
+        <div>
+            {/* The Header and two functions at situated at the top of the map  */}
+            <h1 className="mapHeader">Poseura <span role="img" aria-label="camera">📷</span></h1>
+            <Search panTo={panTo} />
+            <Locate panTo={panTo} />
 
+            {/* The Google Map */}
+            <GoogleMap classname="googleMap"
+                mapContainerStyle={mapContainerStyle}
+                zoom={8}
+                center={center}
+                options={options}
+                onClick={onMapClick}
+                onLoad={onMapLoad}
+            >
+                {/* The marker for Photographers to place photo shoot on the map  */}
+                {markers.map((marker) => (
+                    <Marker
+                        key={marker.time.toISOString()}
+                        position={{ lat: marker.lat, lng: marker.lng }}
+                        icon={{
+                            url: "https://webstockreview.net/images/photographer-clipart-svg-3.png",
+                            scaledSize: new window.google.maps.Size(30, 30),
+                            origin: new window.google.maps.Point(0, 0),
+                            anchor: new window.google.maps.Point(15, 15)
+                        }}
+                        onClick={() => {
+                            setSelected(marker);
+                        }}
+                    />
+                ))}
+                {selected ? (
+                    <InfoWindow position={{ lat: selected.lat, lng: selected.lng }}
+                        onCloseClick={() => {
+                            setSelected(null);
+                        }}
+                    >
+                        <div>
+                            <h2> Photography Shoot </h2>
+                            <p>Time {formatRelative(selected.time, new Date())}</p>
+                        </div>
+                    </InfoWindow>) : null}
 
-        <GoogleMap classname="googleMap"
-            mapContainerStyle={mapContainerStyle}
-            zoom={8}
-            center={center}
-            options={options}
-            onClick={onMapClick}
-            onLoad={onMapLoad}
-        >
-            {markers.map((marker) => (
-                <Marker
-                    key={marker.time.toISOString()}
-                    position={{ lat: marker.lat, lng: marker.lng }}
-                    icon={{
-                        url: "https://webstockreview.net/images/photographer-clipart-svg-3.png",
-                        scaledSize: new window.google.maps.Size(30, 30),
-                        origin: new window.google.maps.Point(0, 0),
-                        anchor: new window.google.maps.Point(15, 15)
-                    }}
-                    onClick={() => {
-                        setSelected(marker);
-                    }}
-                />
-            ))}
-            {selected ? (
-                <InfoWindow position={{ lat: selected.lat, lng: selected.lng }}
-                    onCloseClick={() => {
-                        setSelected(null);
-                    }}
-                >
-                    <div>
-                        <h2> Photography Shoot </h2>
-                        <p>Time {formatRelative(selected.time, new Date())}</p>
-                    </div>
-                </InfoWindow>) : null}
+            </GoogleMap>
+        </div>
+    )
+};
 
-        </GoogleMap>
-    </div>
-}
-
+//Function for the user's GeoLocation using theier computers navigator
 function Locate({ panTo }) {
-    return <button className="locate" onClick={() =>{
+    return <button className="locate" onClick={() => {
         navigator.geolocation.getCurrentPosition((position) => {
             panTo({
                 lat: position.coords.latitude,
@@ -117,6 +122,7 @@ function Locate({ panTo }) {
     </button>
 }
 
+// Function for the Search function on the map 
 function Search({ panTo }) {
     const { ready, value, suggestions: { status, data }, setValue, clearSuggestions } = usePlacesAutocomplete({
         requestOptions: {
@@ -147,10 +153,10 @@ function Search({ panTo }) {
                 />
                 <ComboboxPopover>
                     <ComboboxList>
-                    {status === "OK" &&
-                        data.map(({ id, description }) => (
-                        <ComboboxOption key={id} value={description} />
-                        ))}
+                        {status === "OK" &&
+                            data.map(({ id, description }) => (
+                                <ComboboxOption key={id} value={description} />
+                            ))}
                     </ComboboxList>
                 </ComboboxPopover>
             </Combobox>
