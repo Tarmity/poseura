@@ -60,7 +60,7 @@ export default function Map() {
 
 
     return <div>
-        <h1 className="mapHeader">Photographer <span>📷</span></h1>
+        <h1 className="mapHeader">Poseura <span role="img" aria-label="camera">📷</span></h1>
         <Search panTo={panTo} />
         <Locate panTo={panTo} />
 
