@@ -3,9 +3,9 @@
 {
     "id": 1,
     "name": "Ansel Adams",
-    "skill-Level": "Professional ",
+    "skillLevel": "Professional ",
     "about": "The “Supreme Master of Landscape Photography,”",
-    "Career-Path": " Landscape ",
+    "careerPath": " Landscape ",
     "email": "Ansel@poseura.com ",
     "lat": -27.572371  ,
     "lng": 153.066028 
@@ -14,9 +14,9 @@
 {
     "id": 2,
     "name": "Henri Cartier-Bresson",
-    "skill-Level": "Amateur",
+    "skillLevel": "Amateur",
     "about": "father of the street photography movement,",
-    "Career-Path": " Street ",
+    "careerPath": " Street ",
     "email": "Henri@poseura.com",
     "lat": -27.4984  ,
     "lng": 152.9712
@@ -25,9 +25,9 @@
 {
     "id": 3,
     "name": "Brassaï",
-    "skill-Level": "Professional",
+    "skillLevel": "Professional",
     "about": "Hungarian artists who flourished in Paris between WWI and WWII.",
-    "Career-Path": " Action ",
+    "careerPath": " Action ",
     "email": "Brassaï@poseura.com ",
     "lat":  -27.443889 ,
     "lng": 152.953056 
@@ -36,9 +36,9 @@
 {
     "id": 4,
     "name": "Man Ray",
-    "skill-Level": "Amateur",
+    "skillLevel": "Amateur",
     "about": "known for his innovative techniques as well as his stunning fashion",
-    "Career-Path": "Portrait  ",
+    "careerPath": "Portrait  ",
     "email": "Man@poseura.com ",
     "lat": -27.61174  ,
     "lng": 153.302452 
@@ -47,9 +47,9 @@
 {
     "id": 5,
     "name": "Mary Ellen Mark ",
-    "skill-Level": "Professional",
+    "skillLevel": "Professional",
     "about": "Her images depict a unique sense of closeness and care for the people",
-    "Career-Path": " Protrait, Street ",
+    "careerPath": " Protrait, Street ",
     "email": "Mary@poseura.com ",
     "lat": -27.385934  ,
     "lng": 153.029475 

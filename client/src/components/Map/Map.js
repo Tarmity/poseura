@@ -31,6 +31,7 @@ export default function Map() {
     });
     const [markers, setMarkers] = React.useState([]);
     const [selected, setSelected] = React.useState(null);
+    const [photSelected, setPhotSelected] = React.useState(null)
 
     //call back function that stops re-rending the map every time a marker is placed on the map.
     const onMapClick = React.useCallback((event) => {
@@ -104,32 +105,37 @@ export default function Map() {
                         </div>
                     </InfoWindow>) : null}
 
-                    {/* mock data for to see if an array of photographers located on map */}
-                    {photograhers.map((photograher) => (
-                       <>
-                       <Marker 
-                        key={photograher.id}
-                        position={{ lat: photograher.lat, lng: photograher.lng}}
-                        icon={{
-                            url: "https://webstockreview.net/images/clipart-camera-svg-13.png",
-                            scaledSize:new window.google.maps.Size(30, 30),
-                            origin: new window.google.maps.Point(0, 0),
-                            anchor: new window.google.maps.Point(15, 15)
-                        }}
+                {/* mock data for to see if an array of photographers located on map */}
+                {photograhers.map((photographer) => (
+                    <>
+                        <Marker
+                            key={photographer.id}
+                            position={{ lat: photographer.lat, lng: photographer.lng }}
+                            icon={{
+                                url: "https://webstockreview.net/images/clipart-camera-svg-13.png",
+                                scaledSize: new window.google.maps.Size(30, 30),
+                                origin: new window.google.maps.Point(0, 0),
+                                anchor: new window.google.maps.Point(15, 15)
+                            }}
+                            onClick={() => {
+                                setPhotSelected(photographer);
+                            }}
                         />
-                       
-                        <InfoWindow
-                        key={photograher.id}
-                        position={{ lat: photograher.lat, lng: photograher.lng }}
-                     >
-                       <h2>hey</h2>
-                    </InfoWindow>
+                        {photSelected ? (
+                            <InfoWindow
+                                key={photographer.id}
+                                position={{ lat: photographer.lat, lng: photographer.lng }}
+                                onCloseClick={() => {
+                                    setPhotSelected(null);
+                                }}
+                            >
+                            <>
+                            <h2>{photographer.name}</h2>
+                            <p>{photographer.skillLevel}</p>
+                            </>
+                            </InfoWindow>) : null}
                     </>
-                    ))};
-
-                    {/* {photograhers.map((photograher) => (
-                     
-                    ))} */}
+                ))};
 
             </GoogleMap>
         </div>
