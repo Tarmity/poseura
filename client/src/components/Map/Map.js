@@ -6,7 +6,7 @@ import { Combobox, ComboboxInput, ComboboxPopover, ComboboxList, ComboboxOption,
 import "@reach/combobox/styles.css";
 // import mapStyles from "./mapStyles";
 import './Map.css';
-import photograhers from './Photographers.json'
+import photographers from './Photographers.json'
 
 const libraries = ["places"]
 const mapContainerStyle = {
@@ -32,6 +32,7 @@ export default function Map() {
     const [markers, setMarkers] = React.useState([]);
     const [selected, setSelected] = React.useState(null);
     const [photSelected, setPhotSelected] = React.useState(null)
+    // const [photographer, setPhotographer] = React.useState([])
 
     //call back function that stops re-rending the map every time a marker is placed on the map.
     const onMapClick = React.useCallback((event) => {
@@ -106,7 +107,7 @@ export default function Map() {
                     </InfoWindow>) : null}
 
                 {/* mock data for to see if an array of photographers located on map */}
-                {photograhers.map((photographer) => (
+                {photographers.map((photographer) => (
                     <>
                         <Marker
                             key={photographer.id}
@@ -121,21 +122,22 @@ export default function Map() {
                                 setPhotSelected(photographer);
                             }}
                         />
-                        {photSelected ? (
+                        
+                    </>
+                ))}
+                {photSelected ? (
                             <InfoWindow
-                                key={photographer.id}
-                                position={{ lat: photographer.lat, lng: photographer.lng }}
+                                key={photSelected.id}
+                                position={{ lat: photSelected.lat, lng: photSelected.lng }}
                                 onCloseClick={() => {
                                     setPhotSelected(null);
                                 }}
                             >
                             <>
-                            <h2>{photographer.name}</h2>
-                            <p>{photographer.skillLevel}</p>
+                            <h2>{photSelected.name}</h2>
+                            <p>{photSelected.skillLevel}</p>
                             </>
                             </InfoWindow>) : null}
-                    </>
-                ))};
 
             </GoogleMap>
         </div>
