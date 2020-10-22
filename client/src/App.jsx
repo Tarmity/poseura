@@ -5,6 +5,7 @@ import Login from './pages/Login';
 import Create from './pages/CreateUser';
 import Home from './pages/Home';
 import Booking from './pages/Booking';
+import CreateBooking from './pages/CreateBooking';
 
 // import axios from 'axios';
 
@@ -28,6 +29,9 @@ class App extends Component {
           </Switch>
           <Switch>
             <Route exact path="/booking" component={Booking} />
+          </Switch>
+          <Switch>
+            <Route exact path="/createbooking" component={CreateBooking} />
           </Switch>
 
         </Router>

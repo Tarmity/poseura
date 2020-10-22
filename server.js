@@ -10,17 +10,7 @@ require('dotenv').config()
 const morgan = require('morgan');
 const models = require('./models');
 
-// Define middleware here
-// app.use(session({secret: 'surfs-up'}))
-// app.use( (req, res, next) => {
-//   console.log('req.session', req.session);
-//   next()
-// });
-// app.post('/api/create-user', (req, res) => {
-//   console.log('user signup');
-//   req.session.firstName = req.body.firstName;
-//   res.end()
-// })
+
 
 const PORT = process.env.PORT || 3001;
 // Send every other request to the React app

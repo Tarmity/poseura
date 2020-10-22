@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
-export default class CreateBooking extends Component {
 
-    render() {
-        return (
-            <h1 style={{ fontSize: "100px" }}>Booking</h1>
-        )
-    }
+function CreateBooking() {
+
+    return (
+        <>
+            <h1 style={{ fontSize: "100px" }}>Create Booking</h1>
+            <Link to="/home">Home</Link>
+
+        </>
+    )
 }
+
+
+export default CreateBooking;

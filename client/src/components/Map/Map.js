@@ -7,11 +7,12 @@ import "@reach/combobox/styles.css";
 // import mapStyles from "./mapStyles";
 import './Map.css';
 import photographers from './Photographers.json'
+import { Link } from 'react-router-dom';
 
 const libraries = ["places"]
 const mapContainerStyle = {
     width: "100vw",
-    height: "80vh",
+    height: "60vh",
 };
 const center = {
     lat: -27.4698,
@@ -24,7 +25,7 @@ const options = {
 }
 
 
-export default function Map() {
+export default function Map(props) {
     const { isLoaded, loadError } = useLoadScript({
         googleMapsApiKey: process.env.REACT_APP_NOT_SECRET_CODE,
         libraries,
@@ -121,6 +122,7 @@ export default function Map() {
                             }}
                             onClick={() => {
                                 setPhotSelected(photographer);
+                                props.photographerClicked(photographer)
                             }}
                         />
                         
@@ -141,6 +143,7 @@ export default function Map() {
                             </InfoWindow>) : null}
 
             </GoogleMap>
+            
         </div>
     )
 };
