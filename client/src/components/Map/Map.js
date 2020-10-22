@@ -11,7 +11,7 @@ import photographers from './Photographers.json'
 const libraries = ["places"]
 const mapContainerStyle = {
     width: "100vw",
-    height: "50vh",
+    height: "80vh",
 };
 const center = {
     lat: -27.4698,
@@ -65,7 +65,7 @@ export default function Map() {
     return (
         <div>
             {/* The Header and two functions at situated at the top of the map  */}
-            <h1 className="mapHeader">Poseura <span role="img" aria-label="camera">📷</span></h1>
+            <h4 className="mapHeader">Poseura <span role="img" aria-label="camera">📷</span></h4>
             <Search panTo={panTo} />
             <Locate panTo={panTo} />
 
@@ -95,7 +95,8 @@ export default function Map() {
                     />
                 ))}
                 {selected ? (
-                    <InfoWindow position={{ lat: selected.lat, lng: selected.lng }}
+                    <InfoWindow
+                    position={{ lat: selected.lat, lng: selected.lng }}
                         onCloseClick={() => {
                             setSelected(null);
                         }}
@@ -126,7 +127,7 @@ export default function Map() {
                     </>
                 ))}
                 {photSelected ? (
-                            <InfoWindow
+                            <InfoWindow 
                                 key={photSelected.id}
                                 position={{ lat: photSelected.lat, lng: photSelected.lng }}
                                 onCloseClick={() => {
