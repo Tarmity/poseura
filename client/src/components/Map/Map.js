@@ -7,7 +7,7 @@ import "@reach/combobox/styles.css";
 // import mapStyles from "./mapStyles";
 import './Map.css';
 import photographers from './Photographers.json'
-import { Link } from 'react-router-dom';
+
 
 const libraries = ["places"]
 const mapContainerStyle = {
