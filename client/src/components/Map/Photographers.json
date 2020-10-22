@@ -3,56 +3,56 @@
 {
     "id": 1,
     "name": "Ansel Adams",
-    "skill Level": "Professional ",
+    "skill-Level": "Professional ",
     "about": "The “Supreme Master of Landscape Photography,”",
-    "Career Path": " Landscape ",
+    "Career-Path": " Landscape ",
     "email": "Ansel@poseura.com ",
-    "lat": "-27.572371 " ,
-    "lng": "153.066028 "
+    "lat": -27.572371  ,
+    "lng": 153.066028 
     
 },
 {
     "id": 2,
     "name": "Henri Cartier-Bresson",
-    "skill Level": "Amateur",
+    "skill-Level": "Amateur",
     "about": "father of the street photography movement,",
-    "Career Path": " Street ",
+    "Career-Path": " Street ",
     "email": "Henri@poseura.com",
-    "lat": "-27.4984 " ,
-    "lng": "152.9712"
+    "lat": -27.4984  ,
+    "lng": 152.9712
     
 },
 {
     "id": 3,
     "name": "Brassaï",
-    "skill Level": "Professional",
+    "skill-Level": "Professional",
     "about": "Hungarian artists who flourished in Paris between WWI and WWII.",
-    "Career Path": " Action ",
+    "Career-Path": " Action ",
     "email": "Brassaï@poseura.com ",
-    "lat": " -27.443889" ,
-    "lng": "152.953056 "
+    "lat":  -27.443889 ,
+    "lng": 152.953056 
     
 },
 {
     "id": 4,
     "name": "Man Ray",
-    "skill Level": "Amateur",
+    "skill-Level": "Amateur",
     "about": "known for his innovative techniques as well as his stunning fashion",
-    "Career Path": "Portrait  ",
+    "Career-Path": "Portrait  ",
     "email": "Man@poseura.com ",
-    "lat": "-27.61174 " ,
-    "lng": "153.302452 "
+    "lat": -27.61174  ,
+    "lng": 153.302452 
     
 },
 {
     "id": 5,
     "name": "Mary Ellen Mark ",
-    "skill Level": "Professional",
+    "skill-Level": "Professional",
     "about": "Her images depict a unique sense of closeness and care for the people",
-    "Career Path": " Protrait, Street ",
+    "Career-Path": " Protrait, Street ",
     "email": "Mary@poseura.com ",
-    "lat": "-27.385934 " ,
-    "lng": "153.029475 "
+    "lat": -27.385934  ,
+    "lng": 153.029475 
     
 }
 

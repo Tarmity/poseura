@@ -6,6 +6,7 @@ import { Combobox, ComboboxInput, ComboboxPopover, ComboboxList, ComboboxOption,
 import "@reach/combobox/styles.css";
 // import mapStyles from "./mapStyles";
 import './Map.css';
+import photograhers from './Photographers.json'
 
 const libraries = ["places"]
 const mapContainerStyle = {
@@ -103,6 +104,21 @@ export default function Map() {
                         </div>
                     </InfoWindow>) : null}
 
+                    {/* mock data for to see if an array of photographers located on map */}
+                    {photograhers.map((photograher) => (
+                        <Marker 
+                        key={photograher.id}
+                        position={{ lat: photograher.lat, lng: photograher.lng}}
+                        icon={{
+                            url: "https://webstockreview.net/images/clipart-camera-svg-13.png",
+                            scaledSize:new window.google.maps.Size(30, 30),
+                            origin: new window.google.maps.Point(0, 0),
+                            anchor: new window.google.maps.Point(15, 15)
+                        }}
+                        />
+                        
+                    ))}
+                    
             </GoogleMap>
         </div>
     )
