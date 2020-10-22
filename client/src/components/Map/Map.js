@@ -106,7 +106,8 @@ export default function Map() {
 
                     {/* mock data for to see if an array of photographers located on map */}
                     {photograhers.map((photograher) => (
-                        <Marker 
+                       <>
+                       <Marker 
                         key={photograher.id}
                         position={{ lat: photograher.lat, lng: photograher.lng}}
                         icon={{
@@ -116,9 +117,20 @@ export default function Map() {
                             anchor: new window.google.maps.Point(15, 15)
                         }}
                         />
-                        
-                    ))}
-                    
+                       
+                        <InfoWindow
+                        key={photograher.id}
+                        position={{ lat: photograher.lat, lng: photograher.lng }}
+                     >
+                       <h2>hey</h2>
+                    </InfoWindow>
+                    </>
+                    ))};
+
+                    {/* {photograhers.map((photograher) => (
+                     
+                    ))} */}
+
             </GoogleMap>
         </div>
     )
