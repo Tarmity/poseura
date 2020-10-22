@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { } from 'react-bootstrap';
+import { Modal, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Map from '../components/Map/Map';
 import PhotographerCard from '../components/PhotographerCard/PhotographerCard'
 
 
-export default function Booking() {
+export default function Booking(props) {
 
     const [photographer, setPhotographer] = React.useState()
 
@@ -14,25 +14,28 @@ export default function Booking() {
         // Set the state of the displayed photographer 
     }
 
+
     return (
 
         <>
 
             <h1 style={{ fontSize: "100px" }}>Booking</h1>
-            <Link to="/createbooking">Make A booking</Link>
+            <Link to="/home">home</Link>
 
             <Map photographerClicked={setPhotographerDetails} />
 
             {photographer ? (
                 <PhotographerCard
-                    image={ photographer.image }
-                    name={ photographer.name }
-                    careerPath={ photographer.careerPath }
-                    skillLevel={ photographer.skillLevel }
-                    email={ photographer.email }
-                    about={ photographer.about }
+                    image={photographer.image}
+                    name={photographer.name}
+                    careerPath={photographer.careerPath}
+                    skillLevel={photographer.skillLevel}
+                    email={photographer.email}
+                    about={photographer.about}
+
                 />
             ) : null}
+            
         </>
     );
 
