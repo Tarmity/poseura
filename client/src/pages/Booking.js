@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Map from '../components/Map/Map';
 import PhotographerCard from '../components/PhotographerCard/PhotographerCard'
 import Footer from '../components/Footer/Footer'
+import NavBar from '../components/Navbar/NavBar';
 
 
 export default function Booking(props) {
@@ -19,9 +20,8 @@ export default function Booking(props) {
     return (
 
         <>
-
-            <h1 style={{ textAlign: 'center', color: '#23C0AD', margin: '20px 0 20px 0' }}>Lets find you Photgrapher</h1>
-            <Link style={{ color: '#FF5E0E' }} to="/home">Home</Link>
+             <NavBar />
+            <h1 style={{ fontSize: "80px", color: '#23C0AD', textAlign: 'center', marginTop: '30px', marginBottom: '20px' }}>Lets Find You A Photgrapher</h1>
 
             <Map photographerClicked={setPhotographerDetails} />
 

@@ -1,6 +1,6 @@
 .mapHeader {
     position: absolute;
-    top: 11rem;
+    top: 14rem;
     left: 1rem;
     color: #281414;
     z-index:10;
@@ -14,7 +14,7 @@
 
 .search {
     position: absolute;
-    top: 11rem;
+    top: 14rem;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
@@ -30,7 +30,7 @@
 
 .locate {
      position: absolute;
-     top: 11rem;
+     top: 14rem;
      right:1rem;
      background: none;
      border: none;

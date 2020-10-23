@@ -11,9 +11,6 @@ class CreateUser extends Component {
 
             <>
                 <CreateAccount />
-                
-
-
             </>
         );
     }

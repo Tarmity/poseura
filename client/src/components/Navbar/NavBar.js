@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navbar } from 'react-bootstrap';
-import {} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import logo from '../Images/logo.png';
 
 
@@ -20,6 +20,7 @@ export default function NavBar () {
           />{' '}
           Poseura
         </Navbar.Brand>
+        <Link style={{ color: '#FF5E0E' }} to="/home">Home</Link>
       </Navbar>
     </>
 
