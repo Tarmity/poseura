@@ -10,15 +10,15 @@ export default function NavBar () {
     return(
 <>
         <Navbar bg="dark" variant="dark">
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/home">
           <img
             alt=""
-            src= "../Images/logo.png"
-            width="40"
-            height="40"
+            src= "https://github.com/Tarmity/poseura/blob/main/client/src/components/Images/logo.png?raw=true"
+            width="30"
+            height="30"
             className="d-inline-block align-top"
           />{' '}
-          React Bootstrap
+          Poseura
         </Navbar.Brand>
       </Navbar>
     </>
