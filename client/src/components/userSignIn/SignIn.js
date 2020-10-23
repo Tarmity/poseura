@@ -64,26 +64,25 @@ class SignIn extends Component {
         return (
 
             <>
-            <h1 style={{ fontSize: "100px" }}>Login</h1>
-                <Container style={{ border: "solid", borderColor: "#23C0AD", height: "350px", width: "600px" }}>
+                <Container style={{ border: "solid", borderColor: "#23C0AD", height: "350px", width: "600px", textAlign: 'center'}}>
                     <Form onSubmit={this.handleSubmit} style={{ margin: "50px 50px 50px 50px"}}>
                         <Form.Group controlId="formBasicEmail">
-                            <Form.Label>Email address</Form.Label>
+                            <Form.Label style={{ color: "#23C0AD", fontSize: '30px'}}><strong>Email Address</strong></Form.Label>
                             <Form.Control name="email" type="email" value={this.state.email} onChange={this.handleChange} placeholder="Enter email"  />
-                            <Form.Text className="text-muted">
-                                We'll never share your email with anyone else.
-                        </Form.Text>
+                            {/* <Form.Text className="text-muted"> We'll never share your email with anyone else. </Form.Text> */}
                         </Form.Group>
 
                         <Form.Group controlId="formBasicPassword">
-                            <Form.Label>Password</Form.Label>
+                            <Form.Label style={{ color: '#23C0AD', fontSize: '30px'}}><strong>Password</strong></Form.Label>
                             <Form.Control name= "password" type="password" value={this.state.password} onChange={this.handleChange} placeholder="Password" />
                         </Form.Group>
                         <Button variant="primary" type="submit" style={{ backgroundColor: "#23C0AD", borderColor: "#23C0AD", height: "40px", width: "100px" }}>
                             Login
                         </Button>
                     </Form>
+                 <a href='/createuser' style={{ color: '#FF5E0E', fontSize: '20px'}}> <strong>Click here to a New Create Account</strong></a>
                 </Container>
+                
 
 
             </>

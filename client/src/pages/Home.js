@@ -9,7 +9,7 @@ function Home() {
 
     return (
         <>
-            <h1 style={{ fontSize: "100px" }}>Hello </h1>
+
             <JumboHome />
             <Container>
                 <Row>
@@ -34,7 +34,7 @@ function Home() {
                                     Some quick example text to build on the card title and make up the bulk of
                                     the card's content.
                             </Card.Text>
-                                <Button style={{ backgroundColor: "#F1E821", borderColor: "#F1E821", color: "#ffffff", height: "40px", width: "100px" }}><Link to="/booking">Booking</Link></Button>
+                                <Button style={{ backgroundColor: "#F1E821", borderColor: "#F1E821", color: "#ffffff", height: "40px", width: "100px" }}><Link style={{color: "#000000"}} to="/booking">Booking</Link></Button>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -48,7 +48,7 @@ function Home() {
                                     Some quick example text to build on the card title and make up the bulk of
                                     the card's content.
                             </Card.Text>
-                                <Button style={{ backgroundColor: "#23C0AD", borderColor: "#23C0AD", color: "#000707", height: "40px", width: "100px" }}>Profile</Button>
+                                <Button variant="primary" style={{ backgroundColor: "#23C0AD", borderColor: "#23C0AD", height: "40px", width: "100px" }}>Profile</Button>
                             </Card.Body>
                         </Card>
                     </Col>
