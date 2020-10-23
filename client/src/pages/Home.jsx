@@ -3,6 +3,7 @@ import JumboHome from '../components/JumboHome/JumboHome';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import NavBar from '../components/Navbar/NavBar';
+import Footer from '../components/Footer/Footer';
 
 
 
@@ -57,7 +58,7 @@ function Home() {
                     </Col>
                 </Row>
             </Container>
-
+            <Footer />
         </>
     )
 }

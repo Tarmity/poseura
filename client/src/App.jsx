@@ -3,16 +3,12 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
-  useParams
 } from "react-router-dom";
 import "./App.css";
 import Login from './pages/Login';
 import Create from './pages/CreateUser';
 import Home from './pages/Home.jsx';
 import Booking from './pages/Booking';
-import NavBar from './components/Navbar/NavBar'
-import Footer from './components/Footer/Footer'
 
 // import axios from 'axios';
 

@@ -14,7 +14,7 @@ export default function PhotographerCard(props) {
                 height={250}
                 className="mr-3"
                 src={props.image}
-                alt="Image of Photographer"
+                alt="of Photographer"
             />
             <Media.Body style={{ textAlign: 'center', marginTop: '10px', }}>
                 <h2 style={{ fontSize: '40px' }}>{props.name}</h2>

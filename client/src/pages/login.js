@@ -51,7 +51,7 @@ class Login extends Component {
   render() {
     return (
       <div className="loginPage" >
-        <img src="https://github.com/Tarmity/poseura/blob/main/client/src/components/Images/Poseur.png?raw=true"
+        <img src="https://github.com/Tarmity/poseura/blob/main/client/src/components/Images/Poseur.png?raw=true" alt="poseur"
           style={{
             marginTop: '100px',
             marginBottom: '200px',

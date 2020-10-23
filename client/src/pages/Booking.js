@@ -10,6 +10,7 @@ import NavBar from '../components/Navbar/NavBar';
 export default function Booking(props) {
 
     const [photographer, setPhotographer] = React.useState()
+    const [lgShow, setLgShow] = React.useState(false);
 
     const setPhotographerDetails = (photographer) => {
         setPhotographer(photographer)
@@ -20,14 +21,14 @@ export default function Booking(props) {
     return (
 
         <>
-             <NavBar />
+            <NavBar />
             <h1 style={{ fontSize: "80px", color: '#23C0AD', textAlign: 'center', marginTop: '30px', marginBottom: '20px' }}>Lets Find You A Photgrapher</h1>
 
             <Map photographerClicked={setPhotographerDetails} />
 
 
             {photographer ? (
-                <div style={{ minHeight: '300px', display: 'flex', alignItems: 'center'}}>
+                <div style={{ minHeight: '300px', display: 'flex', alignItems: 'center' }}>
 
                     <PhotographerCard
                         image={photographer.image}
@@ -41,6 +42,23 @@ export default function Booking(props) {
                 </div>
 
             ) : null}
+
+            
+            <Button onClick={() => setLgShow(true)} style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto',backgroundColor: "#23C0AD", borderColor: "#23C0AD" }}>Book Photographer</Button>
+            <Modal
+                size="lg"
+                show={lgShow}
+                onHide={() => setLgShow(false)}
+                aria-labelledby="example-modal-sizes-title-lg"
+            >
+                <Modal.Header closeButton>
+                    <Modal.Title id="example-modal-sizes-title-lg">
+                        book photographer
+          </Modal.Title>
+                </Modal.Header>
+                <Modal.Body>...</Modal.Body>
+            </Modal>
+
             <Footer />
 
         </>

@@ -11,8 +11,12 @@ import photographers from './Photographers.json'
 
 const libraries = ["places"]
 const mapContainerStyle = {
-    width: "100vw",
-    height: "60vh",
+    width: "80vw",
+    height: "55vh",
+    display: 'block', marginLeft: 'auto', marginRight: 'auto',
+    marginBottom: '10px',
+    border: 'solid',
+    borderColor: "#FF5E0E",
 };
 const center = {
     lat: -27.4698,
