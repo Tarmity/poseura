@@ -65,8 +65,8 @@ class SignIn extends Component {
 
             <>
             <h1 style={{ fontSize: "100px" }}>Login</h1>
-                <Container style={{ border: "solid" }}>
-                    <Form onSubmit={this.handleSubmit}>
+                <Container style={{ border: "solid", borderColor: "#23C0AD", height: "350px", width: "600px" }}>
+                    <Form onSubmit={this.handleSubmit} style={{ margin: "50px 50px 50px 50px"}}>
                         <Form.Group controlId="formBasicEmail">
                             <Form.Label>Email address</Form.Label>
                             <Form.Control name="email" type="email" value={this.state.email} onChange={this.handleChange} placeholder="Enter email"  />
@@ -79,7 +79,7 @@ class SignIn extends Component {
                             <Form.Label>Password</Form.Label>
                             <Form.Control name= "password" type="password" value={this.state.password} onChange={this.handleChange} placeholder="Password" />
                         </Form.Group>
-                        <Button variant="primary" type="submit">
+                        <Button variant="primary" type="submit" style={{ backgroundColor: "#23C0AD", borderColor: "#23C0AD", height: "40px", width: "100px" }}>
                             Login
                         </Button>
                     </Form>
