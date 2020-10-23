@@ -64,7 +64,7 @@ class SignIn extends Component {
         return (
 
             <>
-                <Container style={{ border: "solid", borderColor: "#23C0AD", height: "350px", width: "600px", textAlign: 'center'}}>
+                <Container style={{  height: "310px", width: "500px", textAlign: 'center', backgroundColor: '#E6E6E6', opacity: '0.8' }}>
                     <Form onSubmit={this.handleSubmit} style={{ margin: "50px 50px 50px 50px"}}>
                         <Form.Group controlId="formBasicEmail">
                             <Form.Label style={{ color: "#23C0AD", fontSize: '30px'}}><strong>Email Address</strong></Form.Label>
@@ -76,11 +76,14 @@ class SignIn extends Component {
                             <Form.Label style={{ color: '#23C0AD', fontSize: '30px'}}><strong>Password</strong></Form.Label>
                             <Form.Control name= "password" type="password" value={this.state.password} onChange={this.handleChange} placeholder="Password" />
                         </Form.Group>
-                        <Button variant="primary" type="submit" style={{ backgroundColor: "#23C0AD", borderColor: "#23C0AD", height: "40px", width: "100px" }}>
+                        <Button variant="primary" type="submit" style={{ backgroundColor: "#23C0AD", borderColor: "#23C0AD", height: "40px", width: "100px", marginBottom: '10px' }}>
                             Login
                         </Button>
+                        <div>
+                        <a href='/createuser' style={{ color: '#FF5E0E', fontSize: '20px'}}> Click here to a New Create Account</a>
+                        </div>
                     </Form>
-                 <a href='/createuser' style={{ color: '#FF5E0E', fontSize: '20px'}}> <strong>Click here to a New Create Account</strong></a>
+                
                 </Container>
                 
 

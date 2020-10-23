@@ -2,6 +2,8 @@ import React from 'react';
 import JumboHome from '../components/JumboHome/JumboHome';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import NavBar from '../components/Navbar/NavBar';
+
 
 
 
@@ -9,7 +11,8 @@ function Home() {
 
     return (
         <>
-
+      
+        <NavBar/>
             <JumboHome />
             <Container>
                 <Row>

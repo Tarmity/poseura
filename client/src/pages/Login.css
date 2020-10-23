@@ -1,8 +1,18 @@
 body {
     background-color: #EEECED!important;
-    background-image: url('../components/Images/BlacknWhiteNew.png')!important;
+    background-image: url('../components/Images/BlacknWhite.png'); 
     background-size: cover;
     background-repeat:  no-repeat;
+    width: 100vw;
+    height: 100vh;
     
     
+    
+}
+
+.loginPage {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-image: url('../components/Images/BlacknWhiteNew.png');
 }

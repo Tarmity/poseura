@@ -3,6 +3,7 @@ import { Modal, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Map from '../components/Map/Map';
 import PhotographerCard from '../components/PhotographerCard/PhotographerCard'
+import Footer from '../components/Footer/Footer'
 
 
 export default function Booking(props) {
@@ -19,23 +20,29 @@ export default function Booking(props) {
 
         <>
 
-            <h1 style={{ textAlign:'center', color: '#23C0AD', margin: '20px 0 20px 0'}}>Lets find you Photgrapher</h1>
-            <Link style={{ color: '#FF5E0E'}}to="/home">Home</Link>
+            <h1 style={{ textAlign: 'center', color: '#23C0AD', margin: '20px 0 20px 0' }}>Lets find you Photgrapher</h1>
+            <Link style={{ color: '#FF5E0E' }} to="/home">Home</Link>
 
             <Map photographerClicked={setPhotographerDetails} />
 
-            {photographer ? (
-                <PhotographerCard
-                    image={photographer.image}
-                    name={photographer.name}
-                    careerPath={photographer.careerPath}
-                    skillLevel={photographer.skillLevel}
-                    email={photographer.email}
-                    about={photographer.about}
 
-                />
+            {photographer ? (
+                <div style={{ minHeight: '300px', display: 'flex', alignItems: 'center'}}>
+
+                    <PhotographerCard
+                        image={photographer.image}
+                        name={photographer.name}
+                        careerPath={photographer.careerPath}
+                        skillLevel={photographer.skillLevel}
+                        email={photographer.email}
+                        about={photographer.about}
+
+                    />
+                </div>
+
             ) : null}
-            
+            <Footer />
+
         </>
     );
 

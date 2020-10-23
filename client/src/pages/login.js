@@ -50,8 +50,8 @@ class Login extends Component {
 
   render() {
     return (
-      <div className="loginPage">
-        <h1 style={{ textAlign: 'center', fontSize: '150px', margin: '80px 0 100px 0', color: '#23C0AD'}}>Poseura</h1>
+      <div className="loginPage" >
+        <h1 style={{ textAlign: 'center', fontSize: '150px', margin: '80px 0 150px 0', color: '#23C0AD'}}>Poseura</h1>
         <SignIn updateUser={this.updateUser} />
       </div>
     )

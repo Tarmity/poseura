@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navbar } from 'react-bootstrap';
 import {} from 'react-router-dom';
+import logo from '../Images/logo.png';
 
 
 export default function NavBar () {
@@ -12,9 +13,9 @@ export default function NavBar () {
         <Navbar.Brand href="#home">
           <img
             alt=""
-            src="/logo.svg"
-            width="30"
-            height="30"
+            src= "../Images/logo.png"
+            width="40"
+            height="40"
             className="d-inline-block align-top"
           />{' '}
           React Bootstrap
