@@ -51,8 +51,16 @@ class Login extends Component {
   render() {
     return (
       <div className="loginPage" >
-        <img src= ""/>
-        <h1 style={{ textAlign: 'center', fontSize: '150px', margin: '80px 0 150px 0', color: '#23C0AD'}}>Poseura</h1>
+        <img src="https://github.com/Tarmity/poseura/blob/main/client/src/components/Images/Poseur.png?raw=true"
+          style={{
+            marginTop: '100px',
+            marginBottom: '200px',
+            display: 'block',
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            width: '50%',
+          }} />
+        {/* <h1 style={{ textAlign: 'center', fontSize: '150px', margin: '80px 0 150px 0', color: '#23C0AD'}}>Poseura</h1> */}
         <SignIn updateUser={this.updateUser} />
       </div>
     )

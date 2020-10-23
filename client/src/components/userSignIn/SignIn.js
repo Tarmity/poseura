@@ -36,7 +36,7 @@ class SignIn extends Component {
         })
         .then (response => {
             console.log('login response: ')
-            console.log(response)
+            // console.log(response)
             if(response.status === 200) {
                 //update App.jsx state
                 this.props.updateUser({

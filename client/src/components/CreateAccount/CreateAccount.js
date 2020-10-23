@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Form, Button, Container } from 'react-bootstrap';
 import axios from "axios";
+import { Redirect } from 'react-router-dom';
 
 
 class CreateAccount extends Component {
@@ -11,6 +12,7 @@ class CreateAccount extends Component {
         phone: "",
         email: "",
         password: "",
+        redirectTo: null
     }
 
     handleInput = event => {
@@ -44,51 +46,54 @@ class CreateAccount extends Component {
     } 
 
     render() {
+
+        if (this.state.redirectTo) {
+            return <Redirect to ={{ pathname: this.state.redirectTo }} />
+        } else {
+
         return (
 
             <>
-            <h1 style={{ fontSize: "100px" }}>Create Account</h1>
-                <Container style={{ border: "solid" }}>
-                    <Form onSubmit={this.submit}>
+            <h1 style={{ fontSize: "100px", color: '#23C0AD', textAlign: 'center', marginTop: '70px' }}>Create Account</h1>
+                <Container style={{ backgroundColor: '#E6E6E6', height: '650px', width: '500px', textAlign: 'center', opacity: '0.6', marginTop: '100px' }}>
+                    <Form onSubmit={this.submit} style= {{ margin: "50px 50px 50px 50px"}}>
                         <Form.Group controlId="formBasicFirstName">
-                            <Form.Label>First Name</Form.Label>
+                            <Form.Label style={{ color: "#23C0AD", fontSize: '30px'}}>First Name</Form.Label>
                             <Form.Control name="firstName" type="firstName" onInput={this.handleInput} placeholder="First Name" />
                         </Form.Group>
 
                         <Form.Group controlId="formBasicLastName">
-                            <Form.Label>Last Name</Form.Label>
+                            <Form.Label style={{ color: "#23C0AD", fontSize: '30px'}}>Last Name</Form.Label>
                             <Form.Control onInput={this.handleInput} name="lastName" type="lastName" placeholder="Last Name" />
                         </Form.Group>
 
                         <Form.Group controlId="formBasicPhoneNumber">
-                            <Form.Label>Phone Number</Form.Label>
+                            <Form.Label style={{ color: "#23C0AD", fontSize: '30px'}}>Phone Number</Form.Label>
                             <Form.Control onInput={this.handleInput} name="phone" type="phoneNumber" placeholder="Phone Number" />
                         </Form.Group>
 
                         <Form.Group controlId="formBasicEmail">
-                            <Form.Label>Email address</Form.Label>
+                            <Form.Label style={{ color: "#23C0AD", fontSize: '30px'}}>Email address</Form.Label>
                             <Form.Control onInput={this.handleInput} name="email" type="email" placeholder="Enter email" />
-                            <Form.Text className="text-muted">
-                                We'll never share your email with anyone else.
-                        </Form.Text>
                         </Form.Group>
 
                         <Form.Group controlId="formBasicPassword">
-                            <Form.Label>Password</Form.Label>
+                            <Form.Label style={{ color: "#23C0AD", fontSize: '30px'}}>Password</Form.Label>
                             <Form.Control onInput={this.handleInput} name="password" type="password" placeholder="Password" />
                         </Form.Group>
 
-                        <Button variant="primary" type="submit">
+                        <Button variant="primary" type="submit" style={{ backgroundColor: "#23C0AD", borderColor: "#23C0AD", height: "40px", width: "100px"}}>
                             Submit
                     </Button>
                     </Form>
-                    <Form.Text className="text-muted">
-
-                    </Form.Text>
+                    <div>
+                    <a href="/" style={{ color: '#FF5E0E', fontSize: '20px'}} >Back to Login</a>
+                    </div>
                 </Container>
             </>
         );
     }
+}
 }
 
 export default CreateAccount;
