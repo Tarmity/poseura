@@ -8,7 +8,7 @@ export default function PhotographerCard(props) {
 
     return (
 
-        <Media style={{ marginLeft: 'auto', marginRight: 'auto', marginTop: '100px', width: '800px', backgroundColor: '#DEB992' }}>
+        <Media style={{ marginLeft: 'auto', marginRight: 'auto', marginTop: '100px', width: '800px', backgroundColor: ' #f1e821 ' }}>
             <img
                 width={250}
                 height={250}

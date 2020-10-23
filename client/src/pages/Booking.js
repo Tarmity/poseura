@@ -19,8 +19,8 @@ export default function Booking(props) {
 
         <>
 
-            <h1 style={{ fontSize: "100px" }}>Booking</h1>
-            <Link to="/home">home</Link>
+            <h1 style={{ textAlign:'center', color: '#23C0AD', margin: '20px 0 20px 0'}}>Lets find you Photgrapher</h1>
+            <Link style={{ color: '#FF5E0E'}}to="/home">Home</Link>
 
             <Map photographerClicked={setPhotographerDetails} />
 
