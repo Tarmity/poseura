@@ -31,6 +31,7 @@ class CreateAccount extends Component {
             .then((response) => {
                 console.log(response)
                 if (response.data) {
+                    alert("Sign up successful" )
                     console.log('successful signup')
                     this.setState({
                         redirectTo: '/'
@@ -54,7 +55,7 @@ class CreateAccount extends Component {
         return (
 
             <>
-            <h1 style={{ fontSize: "100px", color: '#23C0AD', textAlign: 'center', marginTop: '70px' }}>Create Account</h1>
+            <h1 style={{  fontSize: "80px", color: '#23C0AD', textAlign: 'center', marginTop: '70px', marginBottom: '20px', backgroundColor: '#E6E6E6', height: '100px',opacity: '0.7',}}>Create Account</h1>
                 <Container style={{ backgroundColor: '#E6E6E6', height: '650px', width: '500px', textAlign: 'center', opacity: '0.6', marginTop: '100px' }}>
                     <Form onSubmit={this.submit} style= {{ margin: "50px 50px 50px 50px"}}>
                         <Form.Group controlId="formBasicFirstName">
@@ -85,9 +86,10 @@ class CreateAccount extends Component {
                         <Button variant="primary" type="submit" style={{ backgroundColor: "#23C0AD", borderColor: "#23C0AD", height: "40px", width: "100px"}}>
                             Submit
                     </Button>
+                   
                     </Form>
                     <div>
-                    <a href="/" style={{ color: '#FF5E0E', fontSize: '20px'}} >Back to Login</a>
+                    <a href="/" style={{ color: '#FF5E0E', fontSize: '20px' }} >Back to Login</a>
                     </div>
                 </Container>
             </>
