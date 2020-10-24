@@ -17,6 +17,7 @@ const mapContainerStyle = {
     marginBottom: '10px',
     border: 'solid',
     borderColor: "#FF5E0E",
+    
 };
 const center = {
     lat: -27.4698,
@@ -70,7 +71,7 @@ export default function Map(props) {
     return (
         <div>
             {/* The Header and two functions at situated at the top of the map  */}
-            <h4 className="mapHeader">Poseura <span role="img" aria-label="camera">📷</span></h4>
+            {/* <h4 className="mapHeader">Poseura <span role="img" aria-label="camera">📷</span></h4> */}
             <Search panTo={panTo} />
             <Locate panTo={panTo} />
 
@@ -162,7 +163,7 @@ function Locate({ panTo }) {
             });
         }, () => null);
     }}>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSZBia84Q0tjN87tSgU18k6xxKLSuNw_5Mm4A&usqp=CAU" alt="compass -Locate me" />
+        <img src="https://www.flaticon.com/svg/static/icons/svg/2984/2984229.svg" alt="compass -Locate me" />
     </button>
 }
 

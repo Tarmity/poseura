@@ -16,8 +16,8 @@
 .search {
     position: absolute;
     top: 14rem;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 13%;
+    /* transform: translateX(-50%); */
     width: 100%;
     max-width: 400px;
     z-index: 10;
@@ -32,7 +32,7 @@
 .locate {
      position: absolute;
      top: 14rem;
-     right:12rem;
+     right:13%;
      background: none;
      border: none;
      z-index: 10;
