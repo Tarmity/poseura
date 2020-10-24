@@ -14,7 +14,7 @@ passport.use(
             db.User.findOne({
                 email: email
             }).then(dbUser => {
-                console.log(dbUser.checkPassword)
+                // console.log(dbUser.checkPassword)
                 if (!dbUser) {
                     return done(null, false, {
                         message: "Incorrect email."

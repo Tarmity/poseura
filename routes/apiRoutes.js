@@ -5,8 +5,8 @@ const router = express.Router()
 
 
     router.post("/api/login", passport.authenticate("local"), (req, res) => {
-        console.log(req)
-        console.log('bannana')
+        // console.log(req)
+        // console.log('bannana')
         res.json({
             email: req.user.email,
             id: req.user.id
@@ -27,7 +27,7 @@ const router = express.Router()
 
     router.post("/api/create-user", (req, res) => {
 
-        console.log('heyy');
+        console.log('hey');
         db.User.create({
             firstName: req.body.firstName,
             lastName: req.body.lastName,
