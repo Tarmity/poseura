@@ -9,6 +9,7 @@ import Login from './pages/Login';
 import Create from './pages/CreateUser';
 import Home from './pages/Home.jsx';
 import Booking from './pages/Booking';
+import PhotoProfile from './pages/PhotoProfile';
 
 // import axios from 'axios';
 
@@ -34,6 +35,8 @@ class App extends Component {
             <Route exact path="/home" component={Home} />
 
             <Route exact path="/booking" component={Booking} />
+
+            <Route exact path="/photoprofile" component={PhotoProfile} />
 
 
           </Switch>
