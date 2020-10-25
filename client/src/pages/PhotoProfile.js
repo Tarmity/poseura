@@ -59,7 +59,7 @@ export default function PhotoProfile() {
 
                 </Form>
                 <div>
-                    <a href="/" style={{ color: '#FF5E0E', fontSize: '20px' }} >Back to Login</a>
+                    <a href="/home" style={{ color: '#FF5E0E', fontSize: '20px' }} >Back to Home</a>
                 </div>
             </Container>
             <Footer />

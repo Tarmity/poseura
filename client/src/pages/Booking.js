@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { } from 'react-router-dom';
 import Map from '../components/Map/Map';
 import PhotographerCard from '../components/PhotographerCard/PhotographerCard'
 import Footer from '../components/Footer/Footer'
