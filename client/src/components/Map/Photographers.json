@@ -119,6 +119,66 @@
     "lat":   -33.8398,
     "lng": 151.2817
     
+},
+{
+    "id": 11,
+    "name": "Laura Wilson ",
+    "skillLevel": "Professional",
+    "about": "With her crisper images she began to create a style known as sharp focus photography.",
+    "careerPath": " Protrait, Street ",
+    "email": "Imogen@poseura.com ",
+    "image": "https://upload.wikimedia.org/wikipedia/en/e/e2/Imogen_Cunningham_self_portrait_1909.jpeg ",
+    "lat":   -33.8398,
+    "lng": 151.2817
+    
+},
+{
+    "id": 12,
+    "name": "William Wegman",
+    "skillLevel": "Professional",
+    "about": "With her crisper images she began to create a style known as sharp focus photography.",
+    "careerPath": " Protrait, Street ",
+    "email": "Imogen@poseura.com ",
+    "image": "https://upload.wikimedia.org/wikipedia/en/e/e2/Imogen_Cunningham_self_portrait_1909.jpeg ",
+    "lat":   -33.8398,
+    "lng": 151.2817
+    
+},
+{
+    "id": 13,
+    "name": "Fan Ho",
+    "skillLevel": "Professional",
+    "about": "With her crisper images she began to create a style known as sharp focus photography.",
+    "careerPath": " Protrait, Street ",
+    "email": "Imogen@poseura.com ",
+    "image": "https://upload.wikimedia.org/wikipedia/en/e/e2/Imogen_Cunningham_self_portrait_1909.jpeg ",
+    "lat":   -33.8398,
+    "lng": 151.2817
+    
+},
+{
+    "id": 14,
+    "name": "Andreas Gursky",
+    "skillLevel": "Professional",
+    "about": "With her crisper images she began to create a style known as sharp focus photography.",
+    "careerPath": " Protrait, Street ",
+    "email": "Imogen@poseura.com ",
+    "image": "https://upload.wikimedia.org/wikipedia/en/e/e2/Imogen_Cunningham_self_portrait_1909.jpeg ",
+    "lat":   -33.8398,
+    "lng": 151.2817
+    
+},
+{
+    "id": 15,
+    "name": "Ralph Gibson",
+    "skillLevel": "Professional",
+    "about": "With her crisper images she began to create a style known as sharp focus photography.",
+    "careerPath": " Protrait, Street ",
+    "email": "Imogen@poseura.com ",
+    "image": "https://upload.wikimedia.org/wikipedia/en/e/e2/Imogen_Cunningham_self_portrait_1909.jpeg ",
+    "lat":   -33.8398,
+    "lng": 151.2817
+    
 }
 
 ]

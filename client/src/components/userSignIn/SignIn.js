@@ -9,8 +9,8 @@ class SignIn extends Component {
     constructor() {
         super()
         this.state = {
-            email: " ",
-            password: " ",
+            email: "",
+            password: "",
             redirectTo: null
         }
         this.handleSubmit= this.handleSubmit.bind(this);

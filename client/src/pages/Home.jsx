@@ -69,7 +69,7 @@ function Home() {
                     </Row>
                 </Container>
             </div>
-            <Bot /> 
+            {/* <Bot />  */}
 
             <Footer />
         </>
