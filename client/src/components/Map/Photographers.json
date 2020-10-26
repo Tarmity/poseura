@@ -59,6 +59,66 @@
     "lat": -27.385934  ,
     "lng": 153.029475 
     
+},
+{
+    "id": 6,
+    "name": "Paul Strand ",
+    "skillLevel": "Professional",
+    "about": "He covered many genres and subjects throughout the Americas, Europe, and Africa",
+    "careerPath": " culture ",
+    "email": "Paul@poseura.com ",
+    "image": "https://giam.typepad.com/.a/6a00d8341c10fd53ef016763711dfe970b-500wi ",
+    "lat":  -33.8060 ,
+    "lng": 151.2948
+    
+},
+{
+    "id": 7,
+    "name": "Cindy Sherman ",
+    "skillLevel": "Professional",
+    "about": "Her photography explores contemporary identity and the nature of representation",
+    "careerPath": " nature ",
+    "email": "Cindy@poseura.com ",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Cindy_Sherman_%28cropped%29.jpg ",
+    "lat":  -33.9495,
+    "lng": 151.2437
+    
+},
+{
+    "id": 8,
+    "name": "Robert Frank ",
+    "skillLevel": "Professional",
+    "about": "Between 1950 and ’59 he turned his attention to street photography and photojournalism.",
+    "careerPath": " Protrait ",
+    "email": "Robert@poseura.com ",
+    "image": "https://www.hasselbladfoundation.org/wp/wp-content/uploads/2013/06/Frank-500x500.jpg ",
+    "lat":  -33.7544 ,
+    "lng": 151.2854
+    
+},
+{
+    "id": 9,
+    "name": "Eliot Porter",
+    "skillLevel": "Professional",
+    "about": "He started to photograph birds and landscapes with a Kodak box camera as a child.",
+    "careerPath": " Landscape ",
+    "email": "Eliot@poseura.com ",
+    "image": "https://images.findagrave.com/photos250/photos/2019/141/199322433_699de81d-7b18-451f-a57d-44ada4452e10.jpeg",
+    "lat":  -33.8915 ,
+    "lng": 151.2767
+    
+},
+{
+    "id": 10,
+    "name": "Imogen Cunningham",
+    "skillLevel": "Professional",
+    "about": "With her crisper images she began to create a style known as sharp focus photography.",
+    "careerPath": " Protrait, Street ",
+    "email": "Imogen@poseura.com ",
+    "image": "https://upload.wikimedia.org/wikipedia/en/e/e2/Imogen_Cunningham_self_portrait_1909.jpeg ",
+    "lat":   -33.8398,
+    "lng": 151.2817
+    
 }
 
 ]
