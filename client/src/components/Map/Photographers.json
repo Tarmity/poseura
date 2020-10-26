@@ -124,60 +124,60 @@
     "id": 11,
     "name": "Laura Wilson ",
     "skillLevel": "Professional",
-    "about": "With her crisper images she began to create a style known as sharp focus photography.",
-    "careerPath": " Protrait, Street ",
+    "about": "Her photographs have appeared in The New York Times Magazine",
+    "careerPath": " Protrait ",
     "email": "Imogen@poseura.com ",
-    "image": "https://upload.wikimedia.org/wikipedia/en/e/e2/Imogen_Cunningham_self_portrait_1909.jpeg ",
-    "lat":   -33.8398,
-    "lng": 151.2817
+    "image": "https://www.ashoka.org/sites/default/files/styles/large_round_600x600/public/fellows/laura_wilson_phelan_headshot.jpg?itok=SsGTVgMw",
+    "lat":   -37.8136,
+    "lng": 144.9631
     
 },
 {
     "id": 12,
     "name": "William Wegman",
     "skillLevel": "Professional",
-    "about": "With her crisper images she began to create a style known as sharp focus photography.",
-    "careerPath": " Protrait, Street ",
-    "email": "Imogen@poseura.com ",
-    "image": "https://upload.wikimedia.org/wikipedia/en/e/e2/Imogen_Cunningham_self_portrait_1909.jpeg ",
-    "lat":   -33.8398,
-    "lng": 151.2817
+    "about": " Best known for creating series of compositions involving dogs,",
+    "careerPath": "Pet Photography ",
+    "email": "William@poseura.com ",
+    "image": "https://s.wsj.net/public/resources/images/BN-OB152_fixspa_M_20160517103815.jpg",
+    "lat":   -38.1499,
+    "lng": 144.3617
     
 },
 {
     "id": 13,
     "name": "Fan Ho",
     "skillLevel": "Professional",
-    "about": "With her crisper images she began to create a style known as sharp focus photography.",
-    "careerPath": " Protrait, Street ",
-    "email": "Imogen@poseura.com ",
-    "image": "https://upload.wikimedia.org/wikipedia/en/e/e2/Imogen_Cunningham_self_portrait_1909.jpeg ",
-    "lat":   -33.8398,
-    "lng": 151.2817
+    "about": "He won over 280 awards from international exhibitions and competitions worldwide for his photography.",
+    "careerPath": "classical compositional ",
+    "email": "Fan@poseura.com ",
+    "image": "https://academyofanimatedart.com/wp-content/uploads/2019/01/td-u-fan-ho-street-photographer-self-portrait.jpg ",
+    "lat":   -38.3060,
+    "lng": 145.1890
     
 },
 {
     "id": 14,
     "name": "Andreas Gursky",
     "skillLevel": "Professional",
-    "about": "With her crisper images she began to create a style known as sharp focus photography.",
-    "careerPath": " Protrait, Street ",
-    "email": "Imogen@poseura.com ",
-    "image": "https://upload.wikimedia.org/wikipedia/en/e/e2/Imogen_Cunningham_self_portrait_1909.jpeg ",
-    "lat":   -33.8398,
-    "lng": 151.2817
+    "about": "known for his large format architecture and landscape colour photographs.",
+    "careerPath": " Landscape colour ",
+    "email": "Andreas@poseura.com ",
+    "image": "https://static1.squarespace.com/static/5702ab9d746fb9634796c9f9/5702b54efd028276f35de678/5702bc72fd028276f35ef253/1459797106200/Gursky-Spread-1000x773.jpg?format=original ",
+    "lat":   -37.7992,
+    "lng": 144.9467
     
 },
 {
     "id": 15,
     "name": "Ralph Gibson",
     "skillLevel": "Professional",
-    "about": "With her crisper images she began to create a style known as sharp focus photography.",
-    "careerPath": " Protrait, Street ",
-    "email": "Imogen@poseura.com ",
-    "image": "https://upload.wikimedia.org/wikipedia/en/e/e2/Imogen_Cunningham_self_portrait_1909.jpeg ",
-    "lat":   -33.8398,
-    "lng": 151.2817
+    "about": " His images often incorporate fragments with erotic and mysterious undertones.",
+    "careerPath": " Surreal Juxtaposition ",
+    "email": "Ralph@poseura.com ",
+    "image": "https://iphf.org/wp-content/uploads/2019/06/RalphByLouReed-square-sm.jpg ",
+    "lat":   -37.8019,
+    "lng": 144.9882
     
 }
 
