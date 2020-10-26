@@ -25,7 +25,6 @@
     "dotenv": "^8.2.0",
     "express": "^4.16.3",
     "express-session": "^1.17.1",
-    "foundation-sites": "^6.6.3",
     "google-maps-react": "^2.0.6",
     "if-env": "^1.0.4",
     "mongoose": "^5.10.9",
@@ -34,6 +33,7 @@
     "passport-local": "^1.0.0",
     "react-bootstrap": "^1.3.0",
     "react-foundation": "^0.9.6",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "styled-components": "^5.2.0"
   }
 }
