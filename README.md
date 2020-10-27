@@ -1,5 +1,5 @@
 # Poseura
-![License](https://img.shields.io/github/License/tarmity/poseura
+![License](https://img.shields.io/github/license/tarmity/poseura
 
 ## Description
   * This repository is where I developed Poseura using MERN stack. Not only do I work on code and issues here. I also publish the latest updates and functions. This source code is NOT avaialable to everyone. If you would like to contribute to this project please contact me directly.
