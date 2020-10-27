@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
 import { } from 'react-router-dom';
 import Map from '../components/Map/Map';

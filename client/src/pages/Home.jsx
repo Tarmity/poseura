@@ -4,7 +4,7 @@ import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import NavBar from '../components/Navbar/NavBar';
 import Footer from '../components/Footer/Footer';
-import Bot from '../components/ChatBot/ChatBot';
+// import Bot from '../components/ChatBot/ChatBot';
 
 
 
@@ -69,7 +69,7 @@ function Home() {
                     </Row>
                 </Container>
             </div>
-            {/* <Bot />  */}
+            {/* <Bot  />  */}
 
             <Footer />
         </>
