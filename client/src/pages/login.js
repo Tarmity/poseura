@@ -26,6 +26,7 @@ class Login extends Component {
     this.setState(userObject)
   }
 
+  // ================= checks with passport for users in the database and then logs you in ===========
   getUser() {
     axios.get('/api/login').then(response => {
       console.log('Get user resopnse: ')
@@ -51,6 +52,9 @@ class Login extends Component {
   render() {
     return (
       <div className="loginPage" >
+
+        {/* site logo img */}
+
         <img src="https://github.com/Tarmity/poseura/blob/main/client/src/components/Images/Poseur.png?raw=true" alt="poseur"
           style={{
             marginTop: '100px',
@@ -60,7 +64,7 @@ class Login extends Component {
             marginRight: 'auto',
             width: '50%',
           }} />
-        {/* <h1 style={{ textAlign: 'center', fontSize: '150px', margin: '80px 0 150px 0', color: '#23C0AD'}}>Poseura</h1> */}
+
         <SignIn updateUser={this.updateUser} />
       </div>
     )

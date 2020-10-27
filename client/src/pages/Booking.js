@@ -12,9 +12,10 @@ export default function Booking(props) {
     const [photographer, setPhotographer] = React.useState()
     const [lgShow, setLgShow] = React.useState(false);
 
+   // Set the state of the displayed photographer 
     const setPhotographerDetails = (photographer) => {
         setPhotographer(photographer)
-        // Set the state of the displayed photographer 
+        
     }
 
 

@@ -5,14 +5,12 @@ import {
   Route,
 } from "react-router-dom";
 import "./App.css";
-import Login from './pages/Login';
+import Login from './pages/login.js';
 import Create from './pages/CreateUser';
 import Home from './pages/Home.jsx';
 import Booking from './pages/Booking';
 import PhotoProfile from './pages/PhotoProfile';
 import Blog from './pages/blog';
-
-// import axios from 'axios';
 
 
 class App extends Component {

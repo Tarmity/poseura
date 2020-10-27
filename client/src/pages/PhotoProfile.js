@@ -10,8 +10,13 @@ export default function PhotoProfile() {
 
     return (
         <>
+            {/* NAvBar from the Nabar component  */}
             <NavBar />
+
+            {/* h1 heading and styling for the login page */}
             <h1 style={{ fontSize: "80px", color: '#23C0AD', textAlign: 'center', marginTop: '70px', marginBottom: '20px', backgroundColor: '#E6E6E6', height: '100px', opacity: '0.7', }}>Create Photographer Profile</h1>
+         
+           {/* Container for the photo profile form */}
             <Container style={{ backgroundColor: '#E6E6E6', height: '850px', width: '700px', textAlign: 'center', opacity: '0.6', marginTop: '100px' }}>
                 <Form style={{ margin: "50px 50px 50px 50px" }}>
                     <Form.Group controlId="formBasicFirstName">
