@@ -1,5 +1,5 @@
 import React, { } from 'react';
-import { Modal, Button, Form } from 'react-bootstrap';
+import { Modal, Button, Form, Container, Row, Col } from 'react-bootstrap';
 import { } from 'react-router-dom';
 import Map from '../components/Map/Map';
 import PhotographerCard from '../components/PhotographerCard/PhotographerCard'
@@ -36,10 +36,12 @@ export default function Booking(props) {
 
             <Map photographerClicked={setPhotographerDetails} />
 
-
+            <Container>
+                <Row>
+                    <Col>
             {photographer ? (
                 <div style={{ minHeight: '300px', display: 'flex', alignItems: 'center' }}>
-
+                 
                     <PhotographerCard
                         image={photographer.image}
                         name={photographer.name}
@@ -52,9 +54,16 @@ export default function Booking(props) {
                 </div>
 
             ) : null}
-
-
+            </Col>
+            <Col>
+            {photographer ? (
+                <div style={{ minHeight: '300px', display: 'flex', alignItems: 'center' }}>
             <Button onClick={() => setLgShow(true)} style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', backgroundColor: "#23C0AD", borderColor: "#23C0AD" }}>Book Photographer</Button>
+            </div>
+            ) : null}
+            </Col>
+            </Row>
+            </Container>
 
             {photographer ? (
                 <Modal
