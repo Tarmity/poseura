@@ -21,7 +21,7 @@
     npm install
 
   ## Usage
-  To use Posera, simply go the this link (), Create an account and login in. Once you have logged in you will come to the home page click on the bookings button which will bring you to the search page. Once on the search page use the map to find a photographer. At the present state of this project there is only dummy data in Melbourne, Sydney and Brisbane.
+  To use Posera, simply go the this link (https://desolate-stream-97905.herokuapp.com/) Create an account and login in. Once you have logged in you will come to the home page, you will see three boxes under the heading.  Click on the bookings button which will bring you to the search page with a Google map. Once on the page you can click on the compass to get your geolocation or you can use the search bar to find a photographer. At the present state of this project there is only dummy data in Melbourne, Sydney and Brisbane. When you see a black camera, you can click on it and it will show you the photographers details. You can also click on the map to leave a icon to say your having a photshoot. Also the book form doesn't submit and the photographer profile doesn't create.
    ![img](https://github.com/Tarmity/poseura/blob/main/client/src/components/Images/searchPage.png?raw=true)
   
   ## License
