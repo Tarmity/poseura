@@ -1,5 +1,5 @@
 import React, { } from 'react';
-import { Modal, Button, Form, Container, Row, Col } from 'react-bootstrap';
+import { Modal, Button, Form, Container, Row, Col, Alert } from 'react-bootstrap';
 import { } from 'react-router-dom';
 import Map from '../components/Map/Map';
 import PhotographerCard from '../components/PhotographerCard/PhotographerCard'
@@ -17,6 +17,11 @@ export default function Booking(props) {
         setPhotographer(photographer)
         
     }
+
+    function AlertSuccess() {
+        let message ="Thank you, your booking with Poseura was  successfull";
+        alert(message);
+        } 
 
 
     return (
@@ -79,18 +84,22 @@ export default function Booking(props) {
                     </Modal.Header>
                     <Modal.Body>
                         <Form>
-                            <Form.Group controlId="exampleForm.ControlInput1">
+                        <Form.Group controlId="nameInput">
+                                <Form.Label>Name</Form.Label>
+                                <Form.Control type="name" placeholder="name" />
+                            </Form.Group>
+                            <Form.Group controlId="emailInput">
                                 <Form.Label>Email address</Form.Label>
                                 <Form.Control type="email" placeholder="name@example.com" />
                             </Form.Group>
-                            <Form.Group controlId="exampleForm.ControlSelect1">
+                            <Form.Group controlId="typeSelect">
                                 <Form.Label>Is your Photo shoot for?</Form.Label>
                                 <Form.Control as="select">
                                     <option>Personal</option>
                                     <option>Business</option>
                                 </Form.Control>
                             </Form.Group>
-                            <Form.Group controlId="exampleForm.ControlSelect2">
+                            <Form.Group controlId="occassionSelect">
                                 <Form.Label>What is the special occassion for the shoot?</Form.Label>
                                 <Form.Control as="select" multiple>
                                     <option>Family</option>
@@ -106,12 +115,19 @@ export default function Booking(props) {
                                     <option>Landscape</option>
                                 </Form.Control>
                             </Form.Group>
-                            <Form.Group controlId="exampleForm.ControlTextarea1">
+                            <Form.Group controlId="areaTaking">
                                 <Form.Label>Where is your Photoshoot taking place </Form.Label>
                                 <Form.Control as="textarea" placeholder="Address" rows={1} />
                             </Form.Group>
                         </Form>
-                        <Button variant="primary" type="submit" style={{ backgroundColor: "#23C0AD", borderColor: "#23C0AD", height: "40px", width: "100px" }}>Book</Button>
+                        <Button 
+                        onClick={() => {
+                            setLgShow(false);
+                            AlertSuccess();
+                        }}
+                       
+                        variant="primary" type="submit" 
+                        style={{ backgroundColor: "#23C0AD", borderColor: "#23C0AD", height: "40px", width: "100px" }}>Book</Button>
                     </Modal.Body>
                 </Modal>
             ) : null}
