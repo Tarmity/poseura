@@ -7,6 +7,11 @@ import Footer from '../components/Footer/Footer';
 
 export default function PhotoProfile() {
 
+    function AlertSuccess() {
+        let message ="Thank you, you profile was created successful";
+        alert(message);
+        } 
+
 
     return (
         <>
@@ -37,12 +42,12 @@ export default function PhotoProfile() {
                         <Form.Control as="textarea" rows={3} />
                     </Form.Group>
 
-                    <Form.Group controlId="formBasicEmail">
+                    <Form.Group controlId="Email">
                         <Form.Label style={{ color: "#23C0AD", fontSize: '30px' }}>Email address</Form.Label>
                         <Form.Control name="email" type="email" placeholder="Enter email" />
                     </Form.Group>
 
-                    <Form.Group controlId="exampleForm.ControlSelect1">
+                    <Form.Group controlId="CareerPath">
                         <Form.Label style={{ color: "#23C0AD", fontSize: '30px' }}>Career Path</Form.Label>
                         <Form.Control as="select">
                             <option>Landscape</option>
@@ -53,12 +58,14 @@ export default function PhotoProfile() {
                         </Form.Control>
                     </Form.Group>
 
-                    <Form.Group controlId="exampleForm.ControlInput1">
+                    <Form.Group controlId="SuburbInput">
                         <Form.Label style={{ color: "#23C0AD", fontSize: '30px' }}>Suburb you live In</Form.Label>
-                        <Form.Control type="email" placeholder="Suburb" />
+                        <Form.Control type="name" placeholder="Suburb" />
                     </Form.Group>
 
-                    <Button variant="primary" type="submit" style={{ backgroundColor: "#23C0AD", borderColor: "#23C0AD", height: "40px", width: "100px" }}>
+                    <Button 
+                    onClick={AlertSuccess}
+                    variant="primary" type="submit" style={{ backgroundColor: "#23C0AD", borderColor: "#23C0AD", height: "40px", width: "100px" }}>
                         Submit
                          </Button>
 
