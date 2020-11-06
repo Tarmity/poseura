@@ -1,11 +1,11 @@
 import React from 'react';
 import { Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-
+import  axios from 'axios';
 
 
 export default function NavBar () {
-
+    
 
     return(
 <>
@@ -21,6 +21,7 @@ export default function NavBar () {
      
         </Navbar.Brand>
         <Link style={{ color: '#FF5E0E' }} to="/home">Home</Link>
+        <Link style={{ marginLeft: '20px', color: '#FF5E0E' }} to="/">Logout</Link>
       </Navbar>
     </>
 
