@@ -14,7 +14,7 @@ export default function Blog() {
             <h1 style={{ fontSize: "80px", color: '#23C0AD', textAlign: 'center', marginTop: '70px', marginBottom: '20px', backgroundColor: '#E6E6E6', height: '100px', opacity: '0.7', }}>Latest News</h1>
             <Container>
                 <Card>
-                    <Card.Img variant="top" src="https://www.digidirect.com.au/media/bw/p1c64kbjl16/web_banner_1340x580_canon_bonus_lens.png" />
+                    <Card.Img variant="top" src="https://cdn.mos.cms.futurecdn.net/GDBqnEibpvimpo7ks6xGFD.jpg" />
                     <Card.Body>
                         <Card.Text>
                             Check out the latest news and great deals from Canon.

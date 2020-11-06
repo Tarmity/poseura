@@ -10,7 +10,7 @@ export default function Footer() {
 
         // <div >
 
-            <Navbar fixed="bottom" style={{justifyContent:"center"}}>
+            <Navbar sticky="bottom" style={{justifyContent:"center", marginTop: '80px'}}>
                 Copyright 2020 Tarmity Flassman 
             </Navbar>
         // </div>
