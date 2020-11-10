@@ -1,5 +1,5 @@
 import React, { } from 'react';
-import { Modal, Button, Form, Container, Row, Col, Alert } from 'react-bootstrap';
+import { Modal, Button, Form, Container, Row, Col, } from 'react-bootstrap';
 import { } from 'react-router-dom';
 import Map from '../components/Map/Map';
 import PhotographerCard from '../components/PhotographerCard/PhotographerCard'
