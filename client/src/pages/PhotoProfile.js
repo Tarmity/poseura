@@ -63,6 +63,12 @@ export default function PhotoProfile() {
                         <Form.Control type="name" placeholder="Suburb" />
                     </Form.Group>
 
+                    <Form.Group controlId="SuburbInput">
+                        <Form.Label style={{ color: "#23C0AD", fontSize: '30px',  }}>Profile Picture</Form.Label>
+                        <input type="file" style={{ color: "#23C0AD", fontSize: '20px', marginRight: '10px', marginLeft: '70px' }}></input>
+                    </Form.Group>
+
+
                     <Button 
                     onClick={AlertSuccess}
                     variant="primary" type="submit" style={{ backgroundColor: "#23C0AD", borderColor: "#23C0AD", height: "40px", width: "100px" }}>
