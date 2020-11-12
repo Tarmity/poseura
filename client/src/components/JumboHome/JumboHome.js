@@ -18,7 +18,7 @@ function JumboHome() {
           width: '800px',
           opacity: '0.6',
         }}>
-        <h1 className="header">Welcome to Poseur</h1>
+        <h1 className="header">Welcome to Poseura</h1>
         <p className="para">
           A community of photographers capturing moments in time to cherish
               </p>
