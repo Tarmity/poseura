@@ -16,7 +16,7 @@
   
 
   ## Installation
-  To install necessary dependencies, run the following command:
+  The application is live at https://desolate-stream-97905.herokuapp.com/
   
     npm install
 
